@@ -44,8 +44,6 @@ pipeline {
                 echo 'Deleting Docker Image in docker'
                 sh 'docker rmi $DOCKERHUB_USER/clickstackbackend';
                 sh 'docker rmi $DOCKERHUB_USER/clickstackfrontend';
-                sh 'docker rm clickstackfrontend';
-                sh 'docker rm clickstackbackend';
             }
         }
         stage('Run ansible playbook'){
