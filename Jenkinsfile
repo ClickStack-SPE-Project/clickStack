@@ -12,7 +12,7 @@ pipeline {
         stage('Maven Build Backend'){
             steps{
                 echo 'Building Job'
-                dir('clickStack/clickStack') {
+                dir('backend') {
                     sh 'pwd'
                     sh 'ls'
                     sh 'mvn clean install'
