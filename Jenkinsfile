@@ -1,6 +1,8 @@
 pipeline {
     environment{
         DOCKERHUB_USER = 'youngsmith11'
+        AWS_ACCESS_KEY_ID = credentials('aws-access-key-id') 
+        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
         AWS_REGION = 'us-east-2'
         S3_BUCKET_NAME = 'clickstackstorage'
     }
