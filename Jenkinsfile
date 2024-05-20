@@ -13,8 +13,6 @@ pipeline {
             steps{
                 echo 'Building Job'
                 dir('backend') {
-                    sh 'pwd'
-                    sh 'ls'
                     sh 'mvn clean install'
                 }
             }
