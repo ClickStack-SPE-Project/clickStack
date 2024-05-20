@@ -1,5 +1,5 @@
 - name: Use docker compose to run all containers
-  hosts: localhost
+  hosts: all
   tasks:
     - name: Install Docker SDK for Python
       ansible.builtin.pip:
