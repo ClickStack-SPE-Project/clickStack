@@ -3,6 +3,11 @@
   vars:
     ansible_python_interpreter: /usr/bin/python3
   tasks:
+    - name: Install docker library
+      pip:
+        name: docker
+        executable: /usr/bin/python3
+
     - name: Start docker service
       service:
         name: docker
