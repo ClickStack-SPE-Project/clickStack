@@ -1,2 +1,2 @@
-localhost ansible_user=tarun ansible_ssh_pass=aTmarrauhns7!
-# ansible_ssh_common_args = '-o StrictHostKeyChecking=no'
+[ubuntu_utm]
+client1 ansible_host=localhost ansible_connection=ssh ansible_ssh_user=tarun ansible_ssh_pass=aTmarrauhns7! ansible_sudo_pass=aTmarrauhns7!  ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
