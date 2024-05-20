@@ -1,0 +1,88 @@
+/* image-upload.css */
+
+.image-upload-container {
+    max-width: 150px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .upload-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload-button:hover {
+    background-color: #6c61e4;
+  }
+  
+  .dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dialog-content {
+    background-color: #f8f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .form-input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #bed4e4;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  
+  .form-button-submit {
+    display: inline-block;
+    padding: 7px 17px;
+    background-color: #6f55cd;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  .cancel-form-button {
+    display: inline-block;
+    padding: 7px 17px;
+    background-color: #d26565;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  .form-button-submit:hover {
+    background-color: #5647ff;
+  }
+
+  .cancel-form-button:hover {
+    background-color: #d10018;
+  }
+  

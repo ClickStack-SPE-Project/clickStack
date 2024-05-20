@@ -1,0 +1,28 @@
+.gallery-container {
+    padding: 20px;
+  }
+  
+  .album-list {
+    display: flex;
+    gap: 3rem;
+    margin-top: 30px;
+  }
+  
+  .floating-add-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure the button is above other elements */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+  }
+  
+  .floating-add-button:hover {
+    background-color: #0056b3;
+  }
+  

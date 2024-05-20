@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  clickstackbackend:
+    image: youngsmith11/clickstackbackend
+    container_name: clickstackbackend
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://clickstack_db:3306/clickStack?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+    depends_on:
+      - clickstack_db
+    ports:
+      - "9191:9191"
+    networks:
+      - clickstack
+
+  clickstack_db:
+    image: mysql:8
+    container_name: clickstack_db
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=clickStack
+    volumes:
+      - clickstack_db:/var/lib/mysql
+    networks:
+      - clickstack
+
+  clickstackfrontend:
+    image: youngsmith11/clickstackfrontend
+    container_name: clickstackfrontend
+    ports:
+      - "3000:80"
+    networks:
+      - clickstack
+
+networks:
+  clickstack:
+    driver: bridge
+
+volumes:
+  clickstack_db:
+
