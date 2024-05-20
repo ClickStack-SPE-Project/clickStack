@@ -1,6 +1,8 @@
 pipeline {
     environment{
         DOCKERHUB_USER = 'youngsmith11'
+        AWS_REGION = 'us-east-2'
+        S3_BUCKET_NAME = 'clickstackstorage'
     }
     agent any
     stages {
