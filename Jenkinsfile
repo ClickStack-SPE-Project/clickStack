@@ -13,7 +13,7 @@ pipeline {
             steps{
                 echo 'Building Job'
                 dir('backend') {
-                    sh 'mvn clean install'
+                    sh 'mvn clean install -X'
                 }
             }
         }
