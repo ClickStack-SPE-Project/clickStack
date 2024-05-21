@@ -51,7 +51,13 @@ pipeline {
                 script {
                     ansiblePlaybook(
                         playbook: 'playbook.yml',
-                        inventory: 'inventory'
+                        inventory: 'inventory',
+                        extraVars: [
+                            aws_access_key_id: "${env.AWS_ACCESS_KEY_ID}",
+                            aws_secret_access_key: "${env.AWS_SECRET_ACCESS_KEY}",
+                            aws_region: "${env.AWS_REGION}",
+                            s3_bucket_name: "${env.S3_BUCKET_NAME}"
+                        ]
                     )
                 }
             }
