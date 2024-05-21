@@ -1,5 +1,10 @@
 - name: Use docker compose to run all containers
   hosts: local
+  vars:
+    aws_access_key_id: "{{ aws_access_key_id }}"
+    aws_secret_access_key: "{{ aws_secret_access_key }}"
+    aws_region: "{{ aws_region }}"
+    s3_bucket_name: "{{ s3_bucket_name }}"
   tasks:
     - name: Install Docker SDK for Python
       ansible.builtin.pip:
@@ -22,3 +27,8 @@
         project_src: ./
         state: present
         pull: yes
+      environment:
+        AWS_ACCESS_KEY_ID: "{{ aws_access_key_id }}"
+        AWS_SECRET_ACCESS_KEY: "{{ aws_secret_access_key }}"
+        AWS_REGION: "{{ aws_region }}"
+        S3_BUCKET_NAME: "{{ s3_bucket_name }}"
