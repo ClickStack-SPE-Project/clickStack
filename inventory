@@ -1,2 +1,2 @@
 [local]
-localhost ansible_user=tarun ansible_ssh_pass=aTmarrauhns7!
+localhost ansible_user=your_username ansible_ssh_pass=your_password
